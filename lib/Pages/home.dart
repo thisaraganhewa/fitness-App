@@ -7,7 +7,14 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        
+        title: const Text(
+          "Breakfast",
+          style: TextStyle(
+            fontWeight: FontWeight.w700,
+            fontSize: 18
+          ),
+        ),
+        centerTitle: true,
       ),
     );
   }
