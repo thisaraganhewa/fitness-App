@@ -25,8 +25,22 @@ class Home extends StatelessWidget {
             child: TextField(
               decoration: InputDecoration(
                 filled: true,
-                fillColor: Colors.white
+                fillColor: Colors.white,
+                contentPadding: EdgeInsets.all(15),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(15),
+                  borderSide: BorderSide.none
+                ),
+                prefixIcon: const Padding(
+                  padding: EdgeInsets.all(12.0),
+                  child: Icon(Icons.search),
+                ),
+                suffixIcon: const Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Icon(Icons.filter),
+                )
               ),
+              
             ),
           )
         ],
