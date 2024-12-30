@@ -13,13 +13,35 @@ class Home extends StatelessWidget {
       backgroundColor: Colors.white,
       body: Column(
         children: [
-          searchBar()
+          searchBar(),
+          const SizedBox(
+            height: 40,
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: EdgeInsets.only(left: 20),
+                child: Text(
+                  "Category",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 18,
+                    fontWeight: FontWeight.w800
+                  ),
+                ),
+              ),
+              SizedBox(height: 15,),
+              Container(
+                height: 150,
+                decoration: BoxDecoration(
+                  color: Colors.green
+                ),
+              )
+            ],
+          )
         ],
       ),
     );
   }
-
-  
-
-  
 }
