@@ -20,22 +20,26 @@ class Home extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Padding(
+              const Padding(
                 padding: EdgeInsets.only(left: 20),
                 child: Text(
                   "Category",
                   style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 18,
-                    fontWeight: FontWeight.w800
-                  ),
+                      color: Colors.black,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w800),
                 ),
               ),
-              SizedBox(height: 15,),
+              const SizedBox(
+                height: 15,
+              ),
               Container(
                 height: 150,
-                decoration: BoxDecoration(
-                  color: Colors.green
+                decoration: const BoxDecoration(color: Colors.green),
+                child: ListView.builder(
+                  itemBuilder: (context, index) {
+                    return Container();
+                  },
                 ),
               )
             ],
