@@ -58,10 +58,18 @@ class _HomeState extends State<Home> {
               ),
               Container(
                 height: 150,
-                decoration: const BoxDecoration(color: Colors.green),
                 child: ListView.builder(
+                  itemCount: categories.length,
+                  scrollDirection: Axis.horizontal,
                   itemBuilder: (context, index) {
-                    return Container();
+                    return Container(
+                      height: 50,
+                      width: 200,
+                      decoration: BoxDecoration(
+                        color: categories[index].boxColor,
+                      ),
+                      
+                    );
                   },
                 ),
               )
