@@ -25,7 +25,7 @@ class _HomeState extends State<Home> {
 
   @override
   void initState() {
-    // TODO: implement initState
+    _getCategories();
     super.initState();
   }
 
