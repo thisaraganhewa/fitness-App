@@ -1,10 +1,33 @@
 import 'package:fitness/components/appBar.dart';
 import 'package:fitness/components/searchBar.dart';
+import 'package:fitness/models/category_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
   const Home({super.key});
+
+  @override
+  State<Home> createState() => _HomeState();
+
+}
+
+class _HomeState extends State<Home> {
+
+  List<CategoryModel> categories = [];
+
+  void _getCategories(){
+
+    categories = CategoryModel.getCategories();
+
+  }
+
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
