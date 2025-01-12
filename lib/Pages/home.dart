@@ -61,6 +61,10 @@ class _HomeState extends State<Home> {
                 child: ListView.separated(
                   itemCount: categories.length,
                   scrollDirection: Axis.horizontal,
+                  padding: const EdgeInsets.only(
+                    left: 20,
+                    right: 20
+                  ),
                   separatorBuilder: (context, index) => const SizedBox(width: 25,),
                   itemBuilder: (context, index) {
                     return Container(
