@@ -57,7 +57,7 @@ class _HomeState extends State<Home> {
                 height: 15,
               ),
               Container(
-                height: 150,
+                height: 120,
                 child: ListView.separated(
                   itemCount: categories.length,
                   scrollDirection: Axis.horizontal,
@@ -68,12 +68,36 @@ class _HomeState extends State<Home> {
                   separatorBuilder: (context, index) => const SizedBox(width: 25,),
                   itemBuilder: (context, index) {
                     return Container(
-                      height: 50,
-                      width: 200,
+                      width: 100,
                       decoration: BoxDecoration(
-                        color: categories[index].boxColor,
+                        color: categories[index].boxColor.withOpacity(0.3),
+                        borderRadius: BorderRadius.circular(16)
                       ),
-                      
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            width: 50,
+                            height: 50,
+                            decoration: const BoxDecoration(
+                              color: Colors.white,
+                              shape: BoxShape.circle
+                            ),
+                            child: SvgPicture.asset(categories[index].iconPath),
+                          ),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          Text(
+                            categories[index].name,
+                            style: const TextStyle(
+                              fontWeight: FontWeight.w400,
+                              color: Colors.black,
+                              fontSize: 14
+                            ),
+                          )
+                        ],
+                      ),
                     );
                   },
                 ),
