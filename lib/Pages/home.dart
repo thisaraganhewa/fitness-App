@@ -58,9 +58,10 @@ class _HomeState extends State<Home> {
               ),
               Container(
                 height: 150,
-                child: ListView.builder(
+                child: ListView.separated(
                   itemCount: categories.length,
                   scrollDirection: Axis.horizontal,
+                  separatorBuilder: (context, index) => const SizedBox(width: 25,),
                   itemBuilder: (context, index) {
                     return Container(
                       height: 50,
